@@ -36,6 +36,7 @@
 import { reactive } from 'vue';
 import {useRouter} from 'vue-router'
 import {POST} from '../requests/api'
+import { vuexStore } from '../storage/vuexs';
 
 interface FormState {
   username: string;
@@ -51,8 +52,10 @@ const router = useRouter();
 const onFinish = (values: any) => {
   console.log('Success:', values);
    POST('/login', values)
-  .then(data => {
-    console.log(data)
+  .then((data: any) => {
+    // save token to store that is implemented by vuex
+    const token = data.token
+    vuexStore.commit('setToken', token)
     router.push('/dashboard');
   })
 };
