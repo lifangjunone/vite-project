@@ -35,17 +35,15 @@
 </template>
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import axios from 'axios';
 import {useRouter} from 'vue-router'
+import {POST} from '../requests/api'
 
 interface FormState {
   username: string;
   password: string;
   remember: boolean;
 }
-const backendBaseUrl = 'http://localhost:5000';
-axios.defaults.baseURL = backendBaseUrl
-const formState = reactive<FormState>({
+const formState = reactive<FormState>(  {
   username: '',
   password: '',
   remember: true,
@@ -53,24 +51,11 @@ const formState = reactive<FormState>({
 const router = useRouter();
 const onFinish = (values: any) => {
   console.log('Success:', values);
-  axios.post('/login', values)
-  .then(response => {
-    console.log(response.data)
-    const _data = response.data
-    if (_data.code == 1000) {
-      console.log(_data.data)
-      router.push('/dashboard');
-    }else {
-      alert('Login failed. Please check your username and password.');
-    }
+   POST('/login', values)
+  .then(data => {
+    console.log(data)
+    router.push('/dashboard');
   })
-  .catch(error => {
-    console.log(error)
-  })
-};
-
-const onFinishFailed = (errorInfo: any) => {
-  console.log('Failed:', errorInfo);
 };
 </script>
 

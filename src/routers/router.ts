@@ -5,8 +5,8 @@ import HelloWorld from '../components/HelloWorld.vue'
 
 const routes = [
     { path: '/', redirect: '/login' },
-    { path: '/login', component: HelloWorld },
-    { path: '/dashboard', component: Dashboard }
+    { path: '/login', component: HelloWorld, name: 'helloworld' },
+    { path: '/dashboard', component: Dashboard, name: 'dashboard' }
     ];
     
 const router = createRouter({
