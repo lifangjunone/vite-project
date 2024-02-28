@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {AxiosResponse} from 'axios'
 import {ApiResponse} from '../interfaces/base_interface'
+import { message } from 'ant-design-vue';
 
 const baseURL = 'http://localhost:5000';
 
@@ -27,10 +28,12 @@ instance.interceptors.response.use(
     (response: AxiosResponse<ApiResponse<any>>) => {
         // To handle before response is handleed
         const _data = response.data
-        if (_data.code == 10000) {
+        const _code = _data.code
+        if (_code == 10000) {
             return _data.data
+        } else if (_code == 10001) {
+            message.error(response.data.msg || '请求失败')
         }
-        alert("xxxxx")
     },
     (error) => {
         // To handle when response was error

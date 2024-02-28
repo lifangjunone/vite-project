@@ -6,7 +6,6 @@
     :wrapper-col="{ span: 16 }"
     autocomplete="off"
     @finish="onFinish"
-    @finishFailed="onFinishFailed"
   >
     <a-form-item
       label="Username"
