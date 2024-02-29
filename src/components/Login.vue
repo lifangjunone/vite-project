@@ -34,9 +34,9 @@
 </template>
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import {useRouter} from 'vue-router'
 import {POST} from '../requests/api'
 import { vuexStore } from '../storage/vuexs';
+import router from '../routers/router'
 
 interface FormState {
   username: string;
@@ -48,7 +48,6 @@ const formState = reactive<FormState>(  {
   password: '',
   remember: true,
 });
-const router = useRouter();
 const onFinish = (values: any) => {
   console.log('Success:', values);
    POST('/login', values)

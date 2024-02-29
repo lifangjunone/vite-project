@@ -22,10 +22,10 @@ const users = reactive<UserList>({
     data: []
 })
 onMounted(async () => {
-    const users = GET("/users")
-    users.then((data: any) => {
+    const user_api = GET("/users")
+    user_api.then((data: any) => {
     console.log(data);
-    
+    users.data = data
 })
 })
 

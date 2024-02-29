@@ -3,9 +3,9 @@ import {AxiosResponse} from 'axios'
 import {ApiResponse} from '../interfaces/base_interface'
 import { message } from 'ant-design-vue';
 import {vuexStore} from '../storage/vuexs'
+import router from '../routers/router'
 
 const baseURL = 'http://localhost:5000';
-
 const instance = axios.create({
     baseURL,
     timeout: 5000
@@ -35,6 +35,10 @@ instance.interceptors.response.use(
             return _data.data
         } else if (_code == 10001) {
             message.error(response.data.msg || '请求失败')
+        } else if (_code == 10002) {
+            message.error(response.data.msg)
+            router.push('/login')
+
         }
     },
     (error) => {
