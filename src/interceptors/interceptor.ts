@@ -5,7 +5,7 @@ import { message } from 'ant-design-vue';
 import {vuexStore} from '../storage/vuexs'
 import router from '../routers/router'
 
-const baseURL = 'http://localhost:5000';
+const baseURL = 'http://localhost:8000/api/v1';
 const instance = axios.create({
     baseURL,
     timeout: 5000
