@@ -15,7 +15,8 @@ const instance = axios.create({
 instance.interceptors.request.use(
     (config) => {
         // To handle before requrest 
-        config.headers.Authorization = vuexStore.getters.getToken || ""
+        const token = vuexStore.getters.getToken || ""
+        config.headers.Authorization = `Bearer ${token}`
         return config
     },
     (error) => {
