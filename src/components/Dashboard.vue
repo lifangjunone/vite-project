@@ -14,7 +14,7 @@
         :class="{ totalTheme: isActive, totalThemeDefault: !isActive }">
         <span class="icon iconfont" v-if="collapsed1">&#xe618;</span>
         <span v-else>
-          角色权限管理系统
+          RPM System
         </span>
       </div>
       <div>
@@ -39,28 +39,30 @@
           <menu-unfold-outlined
             v-if="collapsed1"
             class="trigger"
+            :class="{ buttonColor: !isActive}"
             @click="() => (collapsed1 = !collapsed1)"
           />
           <menu-fold-outlined 
             v-else class="trigger" 
+            :class="{ buttonColor: !isActive}"
             @click="() => (collapsed1 = !collapsed1)" 
           />
         </div>
         <div class="headerMiddle">
-          <a-menu 
-            v-model:selectedKeys="current" 
-            mode="horizontal" 
-            :items="itemsHorizontal" 
-            :theme="theme"
-            />
-        </div>
-        <div class="headerRight"> 
           <a-switch
+            class="switchTheme"
             :checked="theme === 'dark'"
             checked-children="Dark"
             un-checked-children="Light"
             @change="changeTheme"
           />
+          <a-menu 
+            class="menuHoritontal"
+            v-model:selectedKeys="current" 
+            mode="horizontal" 
+            :items="itemsHorizontal" 
+            :theme="theme"
+            />
         </div>
       </a-layout-header>
       <!-- 主体 -->
@@ -80,10 +82,7 @@ import {
   MenuUnfoldOutlined,
   PieChartOutlined,
   MailOutlined,
-  DesktopOutlined,
-  InboxOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
+  MessageOutlined,
 } from '@ant-design/icons-vue';
 import { MenuProps } from 'ant-design-vue';
 
@@ -95,7 +94,6 @@ const isActive = ref<boolean>(false)
 const changeTheme = (checked: boolean) => {
   theme.value = checked ? 'dark' : 'light';
   isActive.value = !isActive.value
-  console.log(isActive.value);
   
 };
 const state = reactive({
@@ -107,141 +105,120 @@ const itemsVertical = reactive([
   {
     key: '1',
     icon: () => h(PieChartOutlined),
-    label: 'Option 1',
-    title: 'Option 1',
+    label: 'Dashboard',
+    title: 'Dashboard',
   },
   {
     key: '2',
-    icon: () => h(DesktopOutlined),
-    label: 'Option 2',
-    title: 'Option 2',
-  },
-  {
-    key: '3',
-    icon: () => h(InboxOutlined),
-    label: 'Option 3',
-    title: 'Option 3',
-  },
-  {
-    key: 'sub1',
     icon: () => h(MailOutlined),
-    label: 'Navigation One',
-    title: 'Navigation One',
+    label: 'Authrization',
+    title: 'Authrization',
     children: [
       {
+        key: '3',
+        label: 'User',
+        title: 'User',
+      },
+      {
+        key: '4',
+        label: 'Role',
+        title: 'Role',
+      },
+      {
         key: '5',
-        label: 'Option 5',
-        title: 'Option 5',
-      },
-      {
-        key: '6',
-        label: 'Option 6',
-        title: 'Option 6',
-      },
-      {
-        key: '7',
-        label: 'Option 7',
-        title: 'Option 7',
-      },
-      {
-        key: '8',
-        label: 'Option 8',
-        title: 'Option 8',
+        label: 'Permissions',
+        title: 'Permissions',
       },
     ],
   },
   {
-    key: 'sub2',
-    icon: () => h(AppstoreOutlined),
-    label: 'Navigation Two',
-    title: 'Navigation Two',
+    key: '6',
+    icon: () => h(MessageOutlined),
+    label: 'System',
+    title: 'System',
     children: [
       {
-        key: '9',
-        label: 'Option 9',
-        title: 'Option 9',
+        key: '7',
+        label: 'View Management',
+        title: 'View Management',
       },
+      {
+        key: '8',
+        label: 'API Management',
+        title: 'API Management',
+      },
+    ],
+  },
+  {
+    key: '9',
+    icon: () => h(MessageOutlined),
+    label: 'Logging',
+    title: 'Logging',
+    children: [
       {
         key: '10',
-        label: 'Option 10',
-        title: 'Option 10',
+        label: 'Login Log',
+        title: 'Login Log',
       },
       {
-        key: 'sub3',
-        label: 'Submenu',
-        title: 'Submenu',
-        children: [
-          {
-            key: '11',
-            label: 'Option 11',
-            title: 'Option 11',
-          },
-          {
-            key: '12',
-            label: 'Option 12',
-            title: 'Option 12',
-          },
-        ],
+        key: '11',
+        label: 'Operate Log',
+        title: 'Operate Log',
       },
     ],
   },
 ]);
 
 // 水平导航栏配置
-const current = ref<string[]>(['mail']);
+const current = ref<string[]>(['Email']);
+const userAvatar = ref<string>("src/assets/images/avatar.jpg")
 const itemsHorizontal = ref<MenuProps['items']>([
   {
-    key: 'mail',
+    key: 'Manual',
+    label: h('a', { href: 'http://www.baidu.com', target: '_blank' }, 'Manual'),
+    title: 'Manual',
+  },
+  {
+    key: 'Email',
     icon: () => h(MailOutlined),
-    label: 'Navigation One',
-    title: 'Navigation One',
+    label: 'Email',
+    title: 'Email',
   },
   {
-    key: 'app',
-    icon: () => h(AppstoreOutlined),
-    label: 'Navigation Two',
-    title: 'Navigation Two',
+    key: 'Message',
+    icon: () => h(MessageOutlined),
+    label: 'Message',
+    title: 'Message',
   },
   {
-    key: 'sub1',
-    icon: () => h(SettingOutlined),
-    label: 'Navigation Three - Submenu',
-    title: 'Navigation Three - Submenu',
+    key: 'User',
+    // icon: () => h(SettingOutlined),
+    // Icon was replaced by an user avatar, which is an image returned from the backend API
+    icon: () => h('img', { src: userAvatar.value, alt: '', class: 'myAvatar' }), 
+    label: 'User',
+    title: 'User',
     children: [
       {
-        type: 'group',
-        label: 'Item 1',
-        children: [
-          {
-            label: 'Option 1',
-            key: 'setting:1',
-          },
-          {
-            label: 'Option 2',
-            key: 'setting:2',
-          },
-        ],
+        key: 'Your profile',
+        title: 'Your profile',
+        label: 'Your profile',
       },
       {
-        type: 'group',
-        label: 'Item 2',
-        children: [
-          {
-            label: 'Option 3',
-            key: 'setting:3',
-          },
-          {
-            label: 'Option 4',
-            key: 'setting:4',
-          },
-        ],
+        key: 'Modify password',
+        title: 'Modify password',
+        label: 'Modify password',
+      },
+      {
+        key: 'Setting',
+        title: 'Setting',
+        label: 'Setting',
+      },
+      {
+        key: "Sign out",
+        title: 'Sign out',
+        label: 'Sign out',
       },
     ],
-  },
-  {
-    key: 'alipay',
-    label: h('a', { href: 'http://www.baidu.com', target: '_blank' }, '使用手册'),
-    title: '使用手册',
   },
 ]);
 
@@ -276,11 +253,29 @@ const itemsHorizontal = ref<MenuProps['items']>([
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
+    .buttonColor {
+      color: rgb(72, 116, 238);
+    }
+    .headerMiddle {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      .switchTheme {
+        margin-right: 20px;
+      } :deep(.myAvatar) {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%; 
+      }
+    }
   }
   .trigger {
     font-size: 24px;
     line-height: 64px;
-    color: white;
+    color: #ffffffA6;
     cursor: pointer;
     transition: color 0.3s;
     &:hover {

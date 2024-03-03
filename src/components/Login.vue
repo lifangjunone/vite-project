@@ -5,34 +5,34 @@
         :model="loginForm"
         name="basic"
         :label-col="{ span: 4 }"
-        :wrapper-col="{ span: 18 }"
+        :wrapper-col="{ span: 16 }"
         autocomplete="off"
         @finish="onFinish"
       >
         <a-form-item
-          label="账号"
+          label="Username:"
           name="username"
-          :rules="[{ required: true, message: '请输入账号!' }]"
+          :rules="[{ required: true, message: 'Please input your username!' }]"
         >
           <a-input v-model:value="loginForm.username" />
         </a-form-item>
-
+ 
         <a-form-item
-          label="密码"
+          label="Password:"
           name="password"
-          :rules="[{ required: true, message: '请输入密码!' }]"
+          :rules="[{ required: true, message: 'Please input your password!' }]"
         >
           <a-input-password v-model:value="loginForm.password" />
         </a-form-item>
 
         <a-form-item name="remember" :wrapper-col="{ offset: 4, span: 16 }">
           <a-checkbox v-model:checked="loginForm.remember"
-            >记住密码</a-checkbox
+            >remember password</a-checkbox
           > 
         </a-form-item>
 
         <a-form-item :wrapper-col="{ offset: 4, span: 16 }">
-          <a-button type="primary" html-type="submit">登录</a-button>
+          <a-button type="primary" html-type="submit">Login</a-button>
         </a-form-item>
       </a-form>
     </div>
@@ -67,15 +67,15 @@ const onFinish = async () => {
   background: linear-gradient(
     to bottom,
     rgb(114, 114, 202),
-    rgb(202, 202, 219)
+    rgb(241, 241, 245)
   );
   display: flex;
   justify-content: center;
   align-items: center;
   .content {
-    padding: 20px;
+    padding: 12px 0px 8px 24px;
     padding-bottom: 0;
-    width: 500px;
+    width: 540px;
     border: 1px solid #fff;
     border-radius: 6px;
   }
