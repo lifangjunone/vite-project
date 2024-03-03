@@ -1,7 +1,5 @@
 import { POST } from '../requests/request'
 import { LoginForm, UserInfo } from '../interfaces/login'
-// import { vuexStore } from '../storage/vuexs'
-
 
 
 export const LoginAPI = async (loginForm: LoginForm) => {
@@ -11,5 +9,8 @@ export const LoginAPI = async (loginForm: LoginForm) => {
   // vuexStore.commit('setToken', userInfo.token)
   // To save token in borswer of session
   sessionStorage.setItem('token', userInfo.token)
+  // vuexStore.commit('setMenu', userInfo.menu)
+  sessionStorage.setItem('verticalMenu', JSON.stringify(userInfo.vertical_menu))
+  sessionStorage.setItem('horizontalMenu', JSON.stringify(userInfo.horizontal_menu))
   return true
 } 

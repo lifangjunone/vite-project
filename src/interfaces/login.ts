@@ -5,5 +5,7 @@ export interface LoginForm {
 }
 
 export interface UserInfo {
-  token: string
+  token: string,
+  vertical_menu: Array<any>,
+  horizontal_menu: Array<any>
 }

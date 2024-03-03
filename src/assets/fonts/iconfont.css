@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4451213 */
-  src: url('iconfont.woff2?t=1709385174330') format('woff2'),
-       url('iconfont.woff?t=1709385174330') format('woff'),
-       url('iconfont.ttf?t=1709385174330') format('truetype');
+  src: url('iconfont.woff2?t=1709466815231') format('woff2'),
+       url('iconfont.woff?t=1709466815231') format('woff'),
+       url('iconfont.ttf?t=1709466815231') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,138 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaoxi:before {
+  content: "\e62f";
+}
+
+.icon-email:before {
+  content: "\e622";
+}
+
+.icon-xiaoxi1:before {
+  content: "\e606";
+}
+
+.icon-tuichudenglu:before {
+  content: "\e647";
+}
+
+.icon-gerenxinxi:before {
+  content: "\e641";
+}
+
+.icon-shezhi:before {
+  content: "\e648";
+}
+
+.icon-xiaoxi2:before {
+  content: "\e607";
+}
+
+.icon-shezhi1:before {
+  content: "\e659";
+}
+
+.icon-shiyongshouce:before {
+  content: "\e600";
+}
+
+.icon-xiaoxi3:before {
+  content: "\e639";
+}
+
+.icon-gerenxinxi_o:before {
+  content: "\ebcc";
+}
+
+.icon-shiyongshouce1:before {
+  content: "\e674";
+}
+
+.icon-shezhi2:before {
+  content: "\e63e";
+}
+
+.icon-xiugaimima:before {
+  content: "\e718";
+}
+
+.icon-xiaoxi4:before {
+  content: "\e612";
+}
+
+.icon-xiaoxi5:before {
+  content: "\e608";
+}
+
+.icon-tuichudenglu1:before {
+  content: "\e71e";
+}
+
+.icon-xiaoxi6:before {
+  content: "\ec68";
+}
+
+.icon-rizhi:before {
+  content: "\e63f";
+}
+
+.icon-yonghu:before {
+  content: "\e63d";
+}
+
+.icon-auth:before {
+  content: "\e635";
+}
+
+.icon-jiaose:before {
+  content: "\e64d";
+}
+
+.icon-denglurizhi:before {
+  content: "\e616";
+}
+
+.icon-APIjiekou:before {
+  content: "\e653";
+}
+
+.icon-zhanghaoquanxianguanli:before {
+  content: "\eb68";
+}
+
+.icon-API:before {
+  content: "\e6ce";
+}
+
+.icon-dashboard:before {
+  content: "\e62d";
+}
+
+.icon-caozuorizhi:before {
+  content: "\e60a";
+}
+
+.icon-caozuorizhi1:before {
+  content: "\e664";
+}
+
+.icon-quanxian:before {
+  content: "\e60e";
+}
+
+.icon-system:before {
+  content: "\e667";
+}
+
+.icon-API1:before {
+  content: "\e74d";
+}
+
+.icon-yemianshitu:before {
+  content: "\e6e8";
 }
 
 .icon-jiaosequanxianguanli:before {

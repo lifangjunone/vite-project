@@ -6,6 +6,237 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "559613",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1026706",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "1244712",
+      "name": "消息",
+      "font_class": "xiaoxi1",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1391488",
+      "name": "退出登录",
+      "font_class": "tuichudenglu",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "1831590",
+      "name": "个人信息",
+      "font_class": "gerenxinxi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "2901894",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "3522447",
+      "name": "消息",
+      "font_class": "xiaoxi2",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "4320348",
+      "name": "设置",
+      "font_class": "shezhi1",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "4923956",
+      "name": "使用手册",
+      "font_class": "shiyongshouce",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5286700",
+      "name": "消息",
+      "font_class": "xiaoxi3",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "5388070",
+      "name": "个人信息_o",
+      "font_class": "gerenxinxi_o",
+      "unicode": "ebcc",
+      "unicode_decimal": 60364
+    },
+    {
+      "icon_id": "5600507",
+      "name": "使用手册",
+      "font_class": "shiyongshouce1",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "6844455",
+      "name": "设置",
+      "font_class": "shezhi2",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "7090082",
+      "name": "修改密码",
+      "font_class": "xiugaimima",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "11833874",
+      "name": "消息",
+      "font_class": "xiaoxi4",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "13646879",
+      "name": "消息",
+      "font_class": "xiaoxi5",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "16840416",
+      "name": "退出登录",
+      "font_class": "tuichudenglu1",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "23949530",
+      "name": "消息",
+      "font_class": "xiaoxi6",
+      "unicode": "ec68",
+      "unicode_decimal": 60520
+    },
+    {
+      "icon_id": "1045411",
+      "name": "日志",
+      "font_class": "rizhi",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "1119364",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "1167354",
+      "name": "auth",
+      "font_class": "auth",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "1194580",
+      "name": "角色",
+      "font_class": "jiaose",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "3203284",
+      "name": "登录日志",
+      "font_class": "denglurizhi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "3828114",
+      "name": "API接口",
+      "font_class": "APIjiekou",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "3868287",
+      "name": "账号权限管理",
+      "font_class": "zhanghaoquanxianguanli",
+      "unicode": "eb68",
+      "unicode_decimal": 60264
+    },
+    {
+      "icon_id": "6844470",
+      "name": "API",
+      "font_class": "API",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "11267161",
+      "name": "dashboard",
+      "font_class": "dashboard",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "11672347",
+      "name": "操作日志",
+      "font_class": "caozuorizhi",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11799101",
+      "name": "操作日志",
+      "font_class": "caozuorizhi1",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "12659668",
+      "name": "权限",
+      "font_class": "quanxian",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "25215044",
+      "name": "system",
+      "font_class": "system",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "28830395",
+      "name": "API",
+      "font_class": "API1",
+      "unicode": "e74d",
+      "unicode_decimal": 59213
+    },
+    {
+      "icon_id": "38879892",
+      "name": "页面视图",
+      "font_class": "yemianshitu",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
       "icon_id": "5124272",
       "name": "角色权限管理",
       "font_class": "jiaosequanxianguanli",
