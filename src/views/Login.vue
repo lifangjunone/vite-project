@@ -54,7 +54,7 @@ const loginForm = reactive<LoginForm>({
 const onFinish = async () => {
   const isSuccess = await LoginAPI(loginForm)
   if (isSuccess) {
-    router.push("/dashboard")
+    router.push("/layout")
   }
 }
 
@@ -80,4 +80,4 @@ const onFinish = async () => {
     border-radius: 6px;
   }
 }
-</style>../requests/request
+</style>

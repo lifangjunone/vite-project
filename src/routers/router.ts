@@ -1,12 +1,29 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Dashboard from "../components/Dashboard.vue";
-import Login from "../components/Login.vue";
-
 const routes = [
   { path: "/", redirect: "/login" },
-  { path: "/login", component: Login, name: "login" },
-  { path: "/dashboard", component: Dashboard, name: "dashboard" },
+  {
+    path: "/login",
+    component: () => import('../views/Login.vue'),
+    name: "login"
+  },
+  {
+    path: "/layout",
+    component: () => import('../views/Layout.vue'),
+    name: "laylout",
+    children: [
+      {
+        "path": "/home",
+        "name": "home",
+        component: () => import('../views/dashboard/Home.vue'),
+      },
+      {
+        "path": "/user",
+        "name": "user",
+        component: () => import('../views/auth/User.vue'),
+      }
+    ]
+  },
 ];
 
 const router = createRouter({

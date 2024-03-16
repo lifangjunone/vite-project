@@ -25,6 +25,7 @@
           :theme="theme"
           :inline-collapsed="state.collapsed"
           :items="itemsVertical"
+          @click="handleClick"
         ></a-menu>
       </div>
     </a-layout-sider>
@@ -67,9 +68,10 @@
       </a-layout-header>
       <!-- 主体 -->
       <a-layout-content
-        :style="{ margin: '16px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
+        :style="{ margin: '8px 8px', padding: '4px', background: '#fff', minHeight: '280px' }"
       >
-        Content
+        <home></home>
+        <router-view></router-view>
       </a-layout-content>
     </a-layout>
   </a-layout>
@@ -83,6 +85,7 @@ import {
   MenuFoldOutlined,
 } from '@ant-design/icons-vue';
 import { HandleHorizontalHook, HandleIconHook } from '../hooks/handle_icon';
+import Home from '../views/dashboard/Home.vue'
 
 
 // vertical menu config
@@ -108,6 +111,13 @@ const state = reactive({
 const horizontalMenu = HandleHorizontalHook(sessionStorage.getItem('horizontalMenu') || "[]")
 const current = ref<string[]>([horizontalMenu[1]['key']]);
 const itemsHorizontal = ref<MenuProps['items']>(horizontalMenu);
+
+const handleClick = ({ item, key, keyPath }) => {
+  console.log(item);
+  console.log(key);
+  console.log(keyPath);
+  
+}
   
 </script>
 
